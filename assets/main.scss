@@ -8,6 +8,8 @@
 $boloblue: #3B75AF;
 $bolored: #B01736;
 $bololightblue: #99CCFF;
+$bologrey: #424242;
+$bologrigio: #455B71;
 
 body {
   font-family: 'Lato', sans-serif;
@@ -18,7 +20,12 @@ a:visited {
 
 .site-header {
   border-top: 8px solid $boloblue;
+  border-bottom: 2px solid #96731B;
   background-color: $bololightblue;
+  padding-bottom: 10px;
+}
+.site-title {
+  font-weight: 500;
 }
 header .wrapper {
   display: flex;
@@ -73,12 +80,16 @@ ul {
 
 
 footer.site-footer {
+  background-color: $bologrey;
+  border-top: 5px solid $bologrigio;
   padding: 12px;
+  color: #fff;
   h2, p {
     margin: 0;
   }
 .footer-col-3 p {
   font-size: 12px;
   line-height: 16px;
+  color: #fff;
 }
 }
