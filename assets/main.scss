@@ -4,6 +4,11 @@
 
 @import "minima";
 
+
+$boloblue: #3B75AF;
+$bolored: #B01736;
+$bololightblue: #99CCFF;
+
 body {
   font-family: 'Lato', sans-serif;
 }
@@ -11,6 +16,10 @@ a:visited {
   color: $brand-color;
 }
 
+.site-header {
+  border-top: 8px solid $boloblue;
+  background-color: $bololightblue;
+}
 header .wrapper {
   display: flex;
   align-items: flex-end;
@@ -48,6 +57,7 @@ legend {
 
 //Navigation
 ul {
+margin: 0 auto;
   list-style: none;
   width: 240px;
 
@@ -59,4 +69,10 @@ ul {
     margin: 2px 0;
   }
 
+}
+
+
+footer .footer-col-3 p {
+  font-size: 12px;
+  line-height: 16px;
 }
