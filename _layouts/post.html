@@ -1,6 +1,17 @@
 ---
 layout: default
 ---
+
+<p>{% assign nome=page.collection%}</p>
+{% assign pippo = nome | append: "/" %}
+{% assign pippo2 = pippo | prepend: "/" %}
+
+{% for p in site.pages  %}
+  {% capture name %}{{ p.title}}{% endcapture %}
+  {% if p.permalink == pippo2 %}<h3>Ti trovi in: <b>{{name}}</b> {%endif%}</h3>
+{% endfor %}
+
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">

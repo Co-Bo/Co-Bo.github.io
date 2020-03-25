@@ -37,6 +37,9 @@ plugins:
 
 collections:
   ambiente:
+      label: "Ambiente"
+      name: "Ambiente"
+      title: "Ambiente"
       output: true
   anagrafe:
       output: true
