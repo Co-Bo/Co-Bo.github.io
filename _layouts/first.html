@@ -2,12 +2,13 @@
 layout: page
 ---
 <ul>
+  <a href="/">🏠Home</a>
+  <li class="first-current"><a href="{{page.url}}">▼ {{page.title}}</a></li>
   {% assign perma = page.permalink | remove: "/" %}
-
   {% for argomento in site[perma] %}
-  <li>
-    <a href="{{argomento.url}}">{{argomento.title}}</a>
-  </li>
+
+    <a href="{{argomento.url}}"> <li>{{argomento.title}}</li></a>
+
   {%endfor%}
 
 </ul>

@@ -14,7 +14,7 @@ $bologrigio: #455B71;
 body {
   font-family: 'Lato', sans-serif;
 }
-a:visited {
+a:visited, a:visited:hover {
   color: $brand-color;
 }
 
@@ -74,10 +74,27 @@ ul {
     border: 1px solid #aaa;
     padding: 5px;
     margin: 2px 0;
+    transform: translateX(24px);
   }
 
+  &.main-menu a:hover {
+text-decoration: none;
+    li:hover {
+    background-color: $boloblue;
+    color: #fff;
+
+}
+}
 }
 
+li.first-current {
+  transform: translateX(0px);
+  background-color: $boloblue;
+  a {
+
+    color: #fff;
+  }
+}
 
 footer.site-footer {
   background-color: $bologrey;
