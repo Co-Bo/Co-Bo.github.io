@@ -8,7 +8,8 @@ layout: default
 
 {% for p in site.pages  %}
   {% capture name %}{{ p.title}}{% endcapture %}
-  {% if p.permalink == pippo2 %}<h3>Ti trovi in: <b>{{name}}</b> {%endif%}</h3>
+  {% capture link %}{{p.url}}{%endcapture%}
+  {% if p.permalink == pippo2 %}<p><small>Ti trovi in:</small> <a style="color: #111; text-decoration: none" href="/">Home</a> > <a href="{{link}}" style="color: #111; text-decoration: none"><b>{{name}}</b></a> {%endif%}</p>
 {% endfor %}
 
 
