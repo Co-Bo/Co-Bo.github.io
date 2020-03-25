@@ -26,6 +26,11 @@ a:visited, a:visited:hover {
 }
 .site-title {
   font-weight: 500;
+
+  &:hover, &:visited:hover {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 header .wrapper {
   display: flex;
@@ -96,6 +101,9 @@ li.first-current {
   }
 }
 
+
+
+//Footer
 footer.site-footer {
   background-color: $bologrey;
   border-top: 5px solid $bologrigio;
@@ -108,5 +116,6 @@ footer.site-footer {
   font-size: 12px;
   line-height: 16px;
   color: #fff;
+  font-family: "Titillium Web";
 }
 }
