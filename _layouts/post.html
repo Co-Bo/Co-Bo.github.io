@@ -3,13 +3,13 @@ layout: default
 ---
 
 <p>{% assign nome=page.collection%}</p>
-{% assign pippo = nome | append: "/" %}
-{% assign pippo2 = pippo | prepend: "/" %}
+{% assign nome1 = nome | append: "/" %}
+{% assign nome2 = nome1 | prepend: "/" %}
 
 {% for p in site.pages  %}
   {% capture name %}{{ p.title}}{% endcapture %}
   {% capture link %}{{p.url}}{%endcapture%}
-  {% if p.permalink == pippo2 %}<p><small>Ti trovi in:</small> <a style="color: #111; text-decoration: none" href="/">Home</a> > <a href="{{link}}" style="color: #111; text-decoration: none"><b>{{name}}</b></a> {%endif%}</p>
+  {% if p.permalink == nome2 %}<p><small>Ti trovi in:</small> <a style="color: #111; text-decoration: none" href="/">Home</a> > <a href="{{link}}" style="color: #111; text-decoration: none"><b>{{name}}</b></a> {%endif%}</p>
 {% endfor %}
 
 

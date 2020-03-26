@@ -1,42 +1,27 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body data-barba="wrapper">
+<body data-barba="wrapper">
 
-    {%- include header.html -%}
-    {%- include tasks.html -%}
-    <main class="page-content" aria-label="Content" data-barba="container" data-barba-namespace="{{page.url}}">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+  {%- include header.html -%}
+  {%- include tasks.html -%}
+  <main class="page-content" aria-label="Content" data-barba="container" data-barba-namespace="{{page.url}}">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
 
-    {%- include footer.html -%}
-<script src="https://unpkg.com/@barba/core"></script>
-<script>
-barba.init({
-  debug: true,
-transitions: [{
-  leave({ current, next, trigger }) {
-    // do something with `current.container` for your leave transition
-    // then return a promise or use `this.async()`
-  },
-  enter({ current, next, trigger }) {
-    // do something with `next.container` for your enter transition
-    // then return a promise or use `this.async()`
-  }
-}]
-});
+  {%- include footer.html -%}
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script>
+    barba.init();
 
-
-function myFunction() {
-  var x = document.getElementById("scripts").value;
-  document.getElementById("display").innerHTML = "" + x;
-}
-
-</script>
-  </body>
-
+    function myFunction() {
+      var x = document.getElementById("scripts").value;
+      document.getElementById("display").innerHTML = "" + x;
+    }
+  </script>
+</body>
 </html>
